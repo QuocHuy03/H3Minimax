@@ -1,0 +1,29 @@
+{
+  "_comment": "Copy to mapping.json and set node ids/titles from YOUR exported API workflow. Target a node by \"node\" (its id in the API json) OR by \"title\" (its _meta.title). Placeholders: $prompt $seed $steps $num_frames $width $height. Only list fields you want to override; anything you leave out keeps the workflow's own value (so turbo 8-step stays 8 if you don't map steps). 'from' on images is 'first' or 'last'.",
+
+  "t2v": {
+    "set": [
+      { "node": "6",  "field": "text",   "value": "$prompt" },
+      { "node": "3",  "field": "seed",   "value": "$seed" },
+      { "node": "3",  "field": "steps",  "value": "$steps" },
+      { "node": "40", "field": "length", "value": "$num_frames" },
+      { "node": "40", "field": "width",  "value": "$width" },
+      { "node": "40", "field": "height", "value": "$height" }
+    ],
+    "images": [],
+    "output_node": "9"
+  },
+
+  "i2v": {
+    "set": [
+      { "node": "6", "field": "text",  "value": "$prompt" },
+      { "node": "3", "field": "seed",  "value": "$seed" },
+      { "node": "3", "field": "steps", "value": "$steps" }
+    ],
+    "images": [
+      { "node": "52", "field": "image", "from": "first" },
+      { "node": "53", "field": "image", "from": "last" }
+    ],
+    "output_node": "9"
+  }
+}

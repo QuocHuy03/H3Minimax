@@ -1,0 +1,29 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/outputs/
+backend/uploads/
+backend/.env
+*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Build artifacts (compiled from the .ts sources)
+frontend/vite.config.js
+frontend/vite.config.d.ts
+frontend/*.tsbuildinfo
+
+# Local ComfyUI workflow exports (machine-specific; keep mapping.example.json)
+backend/workflows/mapping.json
+backend/workflows/t2v.json
+backend/workflows/i2v.json
+backend/workflows/workflow.json
+
+# misc
+.ui-preview.png
+.DS_Store
+*.log

@@ -1,0 +1,27 @@
+# --- API server ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pydantic==2.10.4
+requests==2.32.3           # ComfyUI HTTP client (BACKEND=comfy)
+
+# --- MOCK mode placeholder renderer (default H3_MOCK=1). Light, no GPU. ---
+numpy==2.2.1
+pillow==11.0.0
+imageio==2.36.1
+imageio-ffmpeg==0.5.1
+
+# --- MiniMax H3 inference (install these when you run REAL mode) ---
+# The model is integrated in diffusers as Modular Diffusers blocks.
+# Use a recent diffusers (MiniMax-H3 landed on `main`); pin once a release ships it.
+#   pip install "git+https://github.com/huggingface/diffusers.git"
+# torch must match your CUDA toolkit; install it from https://pytorch.org first.
+#
+# diffusers
+# transformers>=4.57
+# accelerate
+# torchao            # only for the consumer int8 recipe
+# av                 # PyAV, only needed for ref2va / video references
+# imageio
+# imageio-ffmpeg
+# pillow
